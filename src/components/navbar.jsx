@@ -19,6 +19,7 @@ const navbarStyle = {
 const buttonContainerStyle = {
   display: 'flex',
   gap: '10px', // Espacio entre los botones
+  marginLeft: 'auto', // Alinea los botones a la derecha
 };
 
 function Navbar() {
