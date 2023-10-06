@@ -1,13 +1,9 @@
 import React, {Fragment, useContext} from "react"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "../assets/styles/NavbarComponent.css"
-import logofinanzas from '../assets/images/logofinanzas.png';
 import {Button, Col, Container, Nav, Navbar, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import AuthContext from "../context/AuthContext";
 
 
-const NavbarComponent = () => {
+const Menu = () => {
 
     let {user, logoutUser} = useContext(AuthContext)
 
@@ -15,16 +11,10 @@ const NavbarComponent = () => {
 
         <Navbar expand="lg" id="navbarcs" className="navbarcs">
             <Container fluid>
-                <Link to="/">
-                    <Navbar.Brand id="logoboton" alt='logoboton'><img src={logofinanzas} id='logoboton'
-                                                                      alt="logo de ministerio de finanzas"/>
-                    </Navbar.Brand>
-                </Link>
 
                 <Navbar.Toggle aria-controls="navbarScroll"/>
 
                 <Navbar.Collapse>
-                    {user ? (
                         <Container fluid>
                             <Row>
                                 <Col className="d-flex justify-content-start">
@@ -70,7 +60,6 @@ const NavbarComponent = () => {
                             </Row>
                         </Container>
 
-                    ) : (
                         <Fragment>
                             <Container fluid>
                                 <Row>
@@ -93,9 +82,6 @@ const NavbarComponent = () => {
                                 </Row>
                             </Container>
                         </Fragment>
-
-                    )
-                    }
                 </Navbar.Collapse>
             </Container>
         </Navbar>
@@ -103,4 +89,4 @@ const NavbarComponent = () => {
     );
 }
 
-export default NavbarComponent;
+export default Menu;
