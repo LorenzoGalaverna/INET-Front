@@ -1,8 +1,8 @@
 .linea-home {
   margin-top: 1px;
   height: 4px;
-  border: 2px solid #5ABFAA;
-  background-color: #5ABFAA;
+  border: 2px solid #5abfaa;
+  background-color: #5abfaa;
   width: 1200px;
 }
 .body-home {
@@ -17,4 +17,16 @@
 }
 .titulo-home {
   text-align: center;
+}
+.container-chart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.subtitile {
+  margin-left: 150px;
+  padding: 5px;
 }
