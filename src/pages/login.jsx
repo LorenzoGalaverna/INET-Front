@@ -26,13 +26,15 @@ function Login() {
 
   // Estilos
   const containerStyle = {
-    width: '800px',
+    width: '500px',
+    height: '400px', // Hacer el contenedor cuadrado
     padding: '20px',
-    borderRadius: '48px 47px 47px 47px',
+    borderRadius: '10px', // Bordes redondeados
     margin: '0 auto',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'center', // Centrar el contenido verticalmente
     boxShadow: '0px 0px 60px 0px rgba(0,0,0,0.71)',
   };
 
@@ -42,26 +44,34 @@ function Login() {
         Inicio de Sesión
       </Typography>
       <form onSubmit={handleSubmit}>
-        {/* Campos de entrada */}
-        <TextField
-          label="Usuario"
-          variant="outlined"
-          name="username"
-          value={formData.username}
-          onChange={handleInputChange}
-          fullWidth
-          margin="normal"
-        />
-        <TextField
-          label="Contraseña"
-          variant="outlined"
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleInputChange}
-          fullWidth
-          margin="normal"
-        />
+        {/* Campo de entrada de Usuario */}
+        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '10px' }}>
+          <Typography variant="subtitle1">Usuario</Typography>
+          <TextField
+            label="Usuario"
+            variant="outlined"
+            name="username"
+            value={formData.username}
+            onChange={handleInputChange}
+            fullWidth
+            margin="normal"
+          />
+        </div>
+
+        {/* Campo de entrada de Contraseña */}
+        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '10px' }}>
+          <Typography variant="subtitle1">Contraseña</Typography>
+          <TextField
+            label="Contraseña"
+            variant="outlined"
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleInputChange}
+            fullWidth
+            margin="normal"
+          />
+        </div>
         {/* Botón de inicio de sesión */}
         <Button
           type="submit"
