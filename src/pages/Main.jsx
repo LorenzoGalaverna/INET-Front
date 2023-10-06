@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Button, Container } from '@mui/material';
+import Navbar from '../components/navbar';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -20,6 +21,8 @@ const buttonStyle = {
 
 export default function Main() {
   return (
+    <>
+    <Navbar/>
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
       <Grid item xs={8} sx={{ height: '70vh', minWidth: '100%', backgroundColor: '#ededed', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
@@ -55,5 +58,7 @@ export default function Main() {
 
       </Grid>
     </Box>
+    </navbar>
+    
   );
 }
