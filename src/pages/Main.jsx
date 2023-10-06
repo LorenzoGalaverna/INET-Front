@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Button, Container } from '@mui/material';
+=======
+import React from 'react';
+import Navbar from '../components/navbar'
+>>>>>>> nabvar
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -20,6 +25,7 @@ const buttonStyle = {
 
 export default function Main() {
   return (
+<<<<<<< HEAD
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
       <Grid item xs={8} sx={{ height: '70vh', minWidth: '100%', backgroundColor: '#ededed', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
@@ -50,6 +56,14 @@ export default function Main() {
         <Container maxWidth="sm" sx={{textAlign:'center'}}>
           <h1 style={{marginTop:'60px', marginBottom:'40px'}}>Misión del Hospital con Sistema de Alarma Azul</h1>
           <p style={{textAlign:'justify'}}>En nuestro hospital, nuestra misión es proporcionar atención médica de alta calidad y compasiva a nuestros pacientes, con un enfoque especial en la respuesta eficiente a situaciones de emergencia. Nuestro sistema de alarma azul es una parte esencial de nuestra infraestructura para garantizar la seguridad y el bienestar de nuestros pacientes y personal médico. </p>
+=======
+    <>
+    <Navbar />
+      <div>Esta es la main</div>
+    </>
+  );
+}
+>>>>>>> nabvar
 
         </Container>
 
