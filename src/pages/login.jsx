@@ -4,6 +4,8 @@ import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
+import { login } from '../utils/auth';
+
 function Login() {
   const [formData, setFormData] = useState({
     username: '',
@@ -20,7 +22,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar tu lógica para manejar el inicio de sesión, por ejemplo, enviar los datos al servidor.
+    login(formData)
     console.log('Datos de inicio de sesión:', formData);
   };
 
